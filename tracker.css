@@ -1,0 +1,603 @@
+body{
+    background: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: absolute;
+}
+.container{
+    user-select: none;
+    background-color: #06D001;
+    box-sizing: border-box;
+    width: 70rem;
+    height: max-content;
+    border-radius: 1rem;
+    position: relative;
+left: 1%;
+    transform: translate(1%);
+    padding: 3em;
+}
+header{
+    color: #49108B;
+    font-weight: 600;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 25px;
+    text-decoration:overline;
+    text-align: start;
+    text-overflow:ellipsis;
+    position: relative;
+    display: flex;
+    justify-content:flex-start;
+
+}
+.clock{
+  
+    position: absolute;
+    align-items: center;
+    display: flex;
+    padding-top: 0;
+   margin-left: 50%;
+   margin-top: -1.8em;
+   width: 12em;
+   height: 3.4em;
+   background-color: #FFCA03;
+  align-items: center;
+  justify-content: center;
+   border-radius: 1rem;
+   box-shadow: 3px 4px 5px 3px #15F5BA;
+
+    
+}
+.clock::before{
+    content: "";
+    width: 4.2em;
+    height: 4.2em;
+    background-color: #247883;
+    border-radius: 50%;
+    position: absolute;
+    visibility visible;
+    z-index: -1;
+    left: -12px;
+  
+}
+
+.clock::after{
+    content: "";
+    width: 4.2em;
+    height: 4.2em;
+    background-color: #247883;
+    border-radius: 50%;
+    position: absolute;
+    visibility visible;
+    z-index: -1;
+    right: -12px;
+  
+}
+.hrs, .mins, .secs{
+    font-size: 30px;
+    font-weight: 700;
+}
+.colon{
+    font-size: 30px;
+}
+.hrs::after{
+    content: "Hrs";
+    font-size: 15px;
+    color: #4b24a0;
+    text-transform: capitalize;
+}
+.mins::after{
+    content: "mins";
+    font-size: 15px;
+    color: #4b24a0;
+    text-transform: capitalize;
+}
+.secs::after{
+    content: "secs";
+    font-size: 15px;
+    color: #4b24a0;
+    text-transform: capitalize;
+}
+
+.greetings{
+    animation: welcome-greetings  2s 1s ease-in-out backwards;
+    opacity: 0;
+    transition: 0.5s;
+    font-size: larger;
+    align-items:flex-start;
+    justify-content:flex-start;
+    color: red;
+    visibility: visible;
+    margin-left: 2em;
+    margin-top: calc(-100% - 33em);
+}
+
+.form-control {
+    position: relative;
+    margin: 20px 0 40px;
+    width: 190px;
+  }
+  
+  .form-control input {
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px #29ADB2 solid;
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+    font-size: 18px;
+    color: #446A46;
+  }
+  
+  .form-control input:focus,
+  .form-control input:valid {
+    outline: 0;
+    border-bottom-color: lightblue;
+  }
+  
+  .form-control label {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    pointer-events: none;
+  }
+  
+  .form-control label span {
+    display: inline-block;
+    font-size: 18px;
+    min-width: 5px;
+    color: #0F0F0F;
+    transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .form-control input:focus+label span,
+  .form-control input:valid+label span {
+    color: #711DB0;
+    transform: translateY(-30px);
+  }
+
+@keyframes welcome-greetings {
+    
+    0%{
+        visibility: visible;
+        transform: translate(90deg);
+        opacity: 1;
+        z-index: 1;
+    }
+
+    100%{
+        visibility: hidden;
+        transform: none;
+        opacity: 0;
+        z-index: -1;
+    }
+
+
+
+}
+
+/*Code for button */ 
+.button {
+    font-size: 18px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+    padding: 0.7em 2em;
+    border: 3px solid #FF0072;
+    border-radius: 2px;
+    position: relative;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+    color: #FF0072;
+    text-decoration: none;
+    transition: 0.3s ease all;
+    z-index: 1;
+  }
+  
+  .button:before {
+    transition: 0.5s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: '';
+    background-color: #FF0072;
+    z-index: -1;
+  }
+  
+  
+  .button:hover, .button:focus{
+    color: #ffffff;
+  }
+  
+  button:hover:before, button:focus:before {
+    transition: 0.5s all ease;
+    left: 0;
+    right: 0;
+    opacity: 1;
+  }
+  
+  button:active {
+    transform: scale(0.9);
+  }
+
+.balance{
+    display: block;
+    left: 0;
+    top: 37%;
+    transform: translate(37%, 0);
+    justify-content: space-between center;
+    z-index: 1;
+    font-size: 25px;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    color: #EB3678;
+    font-weight: 700;
+
+   
+}
+header2{
+    color: red;
+    margin-left: 4em;
+    text-decoration: overline;
+    text-transform: capitalize;
+}
+
+.balance-screen{
+    border-bottom: 2px solid #180161;  
+direction: rtl;
+    font-size: 25px;
+    text-align: start;
+    pointer-events: none;
+}
+.balance-screen::placeholder{
+    position: absolute;
+    float: left;
+    color: #21BF73;
+    left: 5%;
+    transform: translate(5%);
+}
+
+.dollar-sign{
+    color: #FF8A08;
+    position: relative;
+    left: 3%;
+    transform: translate(5%);
+}
+
+.Payment-Expense {
+    font-size: 25px;
+    margin-top: 1em;
+    margin-bottom: 5em;
+    color: #EB3678;
+    font-weight: 700;
+    display: inline-flex;
+    left: -9em; 
+
+    justify-content: space-between; /* Aligns payment and expense fields on the same line */
+    margin-top: 1em; /* Adds some space above the payment and expense fields */
+}
+
+.Payment, .Expense{
+    font-size: 25px;
+    margin-bottom: 5em;
+    color: #EB3678;
+    font-weight: 700;
+    display: flex;
+    padding-left: 1em;
+    align-items: center; /* Aligns dollar sign and input field vertically */
+}
+
+.history{
+  color: #7695FF;  
+  margin-top: -8em;
+  font-size: 25px;
+  font-weight: 500;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-decoration: underline;
+}
+
+.todayDate{
+    color: #d67d1e;
+    font-size: 20px;
+    border: 2px solid blue;
+}
+.Groceries, .Entertainment, .Stationery{
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-size: larger;
+    color: #C40C0C;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+.Entertainment-items, .Stationery-items, .Grocery-items{
+    color: #FF8343;
+    cursor: pointer;
+    font-size: large;
+    margin-top: 4px;
+}
+#Grocery-select, #Stationery-select{
+    margin-left: 1.8em;
+    cursor: pointer;
+    width: 13.8em;
+}
+.itemsSelected{
+    color: chartreuse;
+    position: relative;
+    display: block;
+    font-size: larger;
+    background-color: red;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+}
+
+.items-screen{
+    
+    position: relative;
+    display: flex;
+    width: 25em;
+    height: 22em;
+    margin-left: 50%;
+   bottom: -8em;
+   background-color: #4F1787;
+   border: none;
+   border-radius: 1em;
+   pointer-events: none;
+   box-shadow: 3px 3px 3px 3px #36BA98;
+   color: #fff;
+}
+
+
+.items-screen::placeholder{
+   font-size: 30px;
+   color: #21BF73;
+}
+.items-screen{
+    color: red;
+    font-size: larger;
+    display: block;
+    text-align: center;
+    flex-direction: row;
+    
+}
+{
+    text-decoration: line-through;
+}
+.Amount{
+    position: relative;
+    font-size: 2em;
+    text-align: start;
+ left: 15%;
+ margin-top: 10%;
+ transform: translate(15%, 10%);
+  
+}
+
+.Amount-screen::placeholder, .Calculate-screen::placeholder{
+    color: #21BF73;
+    left: -20%;
+    transform: translate(-20%);
+  
+}
+
+.Calculate-screen{
+    user-select: none;
+    pointer-events: none;
+}
+
+.Amount-screen, .Calculate-screen{
+    font-size: 25px;
+    direction: rtl;
+}
+
+.Payment-Details{
+    color: rgb(8, 4, 248);
+    font-size: 28px;
+    margin-top: 5em;
+    left: 25%;
+    transform: translate(25%);
+    text-decoration: underline solid red;
+    text-shadow: 1px 1px #1cac23;
+}
+.Card-Name, .Card-Number{
+    margin-left: 10%;
+    color: #180161;
+    font-size: 20px;
+    margin-top: 2em;
+ 
+}
+.nameInput, .numberInput{
+    direction: ;
+}
+i{
+    position: relative;
+    top: 3px;
+    display: flex;
+    font-size: 28px;
+    align-items: center;
+    justify-content: center;
+    padding-top: 3px;
+
+}
+.Owner, .Number{
+font-size: larger;
+position: relative;
+left: -3px;
+}
+.nameInput, .numberInput{
+    transition: 0s;
+    color: #C40C0C;
+    font-size: 20px;
+}
+.nameInput::placeholder {
+ 
+ float: left;
+}
+.transactionContainer{
+    position: relative;
+    display: block;
+    width: 30em;
+    height: 20em;
+    bottom: 14em;
+    margin-left: 50%;
+   background-color: #4F1787;
+   border: none;
+   border-radius: 1em;
+   box-shadow: 3px 3px 3px 3px #36BA98;
+   color: #fff;
+}
+
+.transactionContainer .transactionName, .transactionNumber{
+   width: 99%;
+   height:3em;
+   position: relative;
+   display: flex;
+   pointer-events: none;
+   color: #5BBCFF;
+   font-size: 20px;
+   font-family: Arial, Helvetica, sans-serif;
+   font-style: initial;
+}
+
+.transactionDate{
+    font-size: larger;
+    position: relative;
+    display: block;
+    float: right;
+    color: #FAF0E6;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: italic;
+ 
+}
+.date{
+    float: right;
+    margin-right: -5em;
+}
+
+.date{
+    color: #d67d1e;
+    font-size: 15px;
+    border: 2px solid blue;
+}
+.Transaction{
+    animation: TransactionButtonClickAnimation 2s ease-in  forwards;
+    top: -6em;
+    opacity: 0;
+    visibility: hidden;
+    transition-duration: 1s;
+    background-color: chocolate;
+    text-transform: capitalize;
+    color: #FFC4DD;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 700;
+    position: relative;
+    display: flex;
+    border: none;
+    border-radius: 1em;
+    font-size: larger;
+    transition-duration: 0.15s;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20em;
+    box-shadow: 3px 4px 5px 4px #7A1CAC;
+
+}
+.TransactionButtonClick{
+    transition: 1s ease-in;
+    position: relative;
+    display: flex;
+    visibility: visible;
+   opacity: 0;
+}
+.Transaction:hover{
+    color: #ff0303;
+    transform: scale(1.3);
+    cursor: pointer;
+
+}
+@keyframes TransactionButtonClickAnimation {
+    0%{
+        opacity: 0;
+        transform: translateY(90deg);
+    }
+    100%{
+        opacity: 1;
+        transform: none;
+    }
+}
+.Transaction{
+    top: -6em;
+    left: 6.5%;
+}
+.Confirm{
+   width: 8em;
+   margin-left: 38%;
+}
+
+
+/* From Uiverse.io by nikk7007 */ 
+.Confirm {
+    top: -8em;
+    --color: #D20062;
+    --color2: rgb(10, 25, 30);
+    padding: 0.8em 1.75em;
+    background-color: transparent;
+    border-radius: 6px;
+    border: .3px solid var(--color);
+    transition: .5s;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 1;
+    font-weight: 300;
+    font-size: 17px;
+    font-family: 'Roboto', 'Segoe UI', sans-serif;
+    text-transform: uppercase;
+    color: var(--color);
+    box-shadow: 3px 4px 5px 4px #7A1CAC;
+   }
+   
+   .Confirm::after, .btn::before {
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    transform: skew(90deg) translate(-50%, -50%);
+    position: absolute;
+    inset: 50%;
+    left: 25%;
+    z-index: -1;
+    transition: .5s ease-out;
+    background-color: var(--color);
+   }
+   
+   .Confirm::before {
+    cursor: pointer;
+    top: -30%;
+    left: -25%;
+    transform: skew(90deg) rotate(180deg) translate(-50%, -30%);
+   }
+   
+   .Confirm:hover::before {
+    cursor: pointer;
+    transform: skew(45deg) rotate(180deg) translate(-50%, -50%);
+   }
+   
+   .Confirm:hover::after {
+    transform: skew(45deg) translate(-50%, -50%);
+   }
+   
+   .Confirm:hover {
+    color: var(--color2);
+   }
+   
+   .Confirm:active {
+    filter: brightness(.7);
+    transform: scale(.98);
+   }
+
+ 
