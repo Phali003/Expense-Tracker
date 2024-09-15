@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXPENSE TRACKER</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="tracker.css">
+</head>
+<body>
+
+
+<div class="container">
+    <header>EXPENSE TRACKER</header>
+    <section class="clock">
+       <h1 class="hrs">00</h1>
+       <h2 class="colon">:</h2>
+       <h3 class="mins">00</h3>
+       <h4 class="colon">:</h4>
+       <h5 class="secs">00</h5>
+       
+    </section><br>
+    <article>
+ 
+
+<div class="form-control">
+    <input type="value" required="" class="inputvalue">
+    <label>
+        <span style="transition-delay:0ms"><strong>U</span><span style="transition-delay:50ms">s</span><span style="transition-delay:100ms">e</span><span style="transition-delay:150ms">r</span><span style="transition-delay:200ms">n</span><span style="transition-delay:250ms">a</span><span style="transition-delay:300ms">m</span><span style="transition-delay:350ms">e</span></strong>
+    </label>
+</div>
+<br><br>
+<button type="button" class="button" id="greetings-button">SUBMIT</button>
+<br><br>
+
+       
+    </article>
+   
+  
+    <div class="balance"><header2>balance</header2><br>
+        <span class="dollar-sign">$</span>
+        <input type="text" placeholder="Amount" class="balance-screen" id="amountRemaining">
+</div>
+
+        <div class="Payment-Expense">
+        <div class="Payment">Payment
+            <span class="dollar-sign">$</span>
+            <input type="text" placeholder="Amount" class="balance-screen" id="amountPaid">
+</div>
+            <div class="Expense">Expense
+                <span class="dollar-sign">$</span>
+                <input type="text" placeholder="Amount" class="balance-screen" id="amountSpent">
+
+            </div>
+
+            
+</div>
+<div class="history">History<br>
+    <input type="date" class="todayDate" id="todayDate">
+</div><br>
+<input type="text" class="items-screen" id="items-screen" placeholder="Selected Items">
+
+
+<div class="Groceries">
+    <label for="Grocery-select">Groceries</label>
+    <select id="Grocery-select" class="Grocery-items">
+      
+        <option value="Bakery" id="Bakery" class="itemsSelections">Bakery</option>
+        <option value="Dairy and Eggs" id="Dairy" class="itemsSelections">Dairy and Eggs</option>
+        <option value="Meat and Poultry" id="Meat" class="itemsSelections">Meat and Poultry</option>
+        <option value="Produce" id="Produce" class="itemsSelections">Produce</option>
+        <option value="Snacks and Beverages" id="Snacks" class="itemsSelections">Snacks and Beverages</option>
+        <option value="Frozen Foods" id="Frozen" class="itemsSelections">Frozen Foods</option>
+        <option value="Pantry Staples" id="Staples" class="itemsSelections">Pantry Staples</option>
+    </select>
+</div>
+
+<div class="Entertainment">
+    <label for="Entertainment-select">Entertainment</label>
+    <select id="Entertainment-select" class="Entertainment-items">
+    <option value="Movies" class="itemsSelections">Movies</option>
+    <option value="Music" class="itemsSelections">Music</option>
+    <option value="Theater and Performing Arts" class="itemsSelections">Theater and Performing Arts</option>
+    <option value="Reading" class="itemsSelections">Reading</option>
+   </select>
+   </div>
+
+   <div class="Stationery">
+    <label for="Stationery-select">Stationery</label>
+    <select id="Stationery-select" class="Stationery-items">
+    <option value="Pens" class="itemsSelections">Pens</option>
+    <option value="Notebooks" class="itemsSelections">Notebooks</option>
+    <option value=" Envelopes" class="itemsSelections"> Envelopes</option>
+    <option value="Sticky Notes" class="itemsSelections">Sticky Notes</option>
+
+
+    </select>
+    </div>
+    <br>
+
+    <div class="Amount">
+        <span class="dollar-sign">$</span>
+        <input type="number" placeholder="Calculate" class="Calculate-screen" id="calculateExpense">
+    </div>
+ 
+
+
+    <div class="Amount">
+        <span class="dollar-sign">$</span>
+        <input type="number" placeholder="Enter Amount" class="Amount-screen" id="inputMoney">
+    </div>
+
+   
+<div class="Payment-Details">Payment-Details</div>
+
+<div class="Card-Name" id="Card-Name">Cardholder's Name</div>
+<i class="fa-solid fa-address-book"></i>
+<input  type="text" class="nameInput" placeholder="Your Name" id="nameInput" required><br>
+
+
+<div class="Card-Number" id="Card-Number">Card Number</div>
+<i class="fa-solid fa-house-laptop"></i>
+<input type="number" class="numberInput" placeholder="Card Number" id="numberInput" required><br>
+
+
+<div class="transactionContainer">
+    
+    <input type="text" class="transactionName" id="nameScreen" placeholder="Card-Name"><br>
+    <input type="text" class="transactionNumber" id="numberScreen"  placeholder=" Card Number"><br>
+    <p class="transactionDate">Valid Till</p><br><br>
+    <input type="date" class="date">
+</div>
+
+<button type="button" class="Confirm" id="Confirm"><strong>Confirm</strong></button><br>
+<button type="button" class="Transaction" id="Transaction">Add Transaction</button>
+
+<script src="clock.js">
+    </script>
+    <script src="expense.js">
+
+    </script>
+    
+</div>
+
+</body>
+</html>
+
+  
